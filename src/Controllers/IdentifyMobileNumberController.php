@@ -12,6 +12,5 @@ class IdentifyMobileNumberController extends Controller
     {
         echo $identifyMobileNumber->check('9843642827');
         echo \IdentifyMobileNumber::check('98073a3730');
-
     }
 }
