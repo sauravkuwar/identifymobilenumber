@@ -1,0 +1,33 @@
+{
+    "name": "saurav/identifymobilenumber",
+    "description": "Verify NTC and NCELL mobile number",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Saurav Kuwar",
+            "email": "skuwar@olivemedia.co"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Saurav\\IdentifyMobileNumber\\": "src/",
+            "Saurav\\IdentifyMobileNumber\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Saurav\\IdentifyMobileNumber\\IdentifyMobileNumber"
+            ],
+            "aliases": {
+                "IdentifyMobileNumber": "Saurav\\IdentifyMobileNumber\\Facade\\IdentifyMobileNumberFacade"
+            }
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "orchestra/testbench": "^3.6"
+    }
+}
