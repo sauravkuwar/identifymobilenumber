@@ -20,10 +20,7 @@
         "laravel": {
             "providers": [
                 "Saurav\\IdentifyMobileNumber\\IdentifyMobileNumber"
-            ],
-            "aliases": {
-                "IdentifyMobileNumber": "Saurav\\IdentifyMobileNumber\\Facade\\IdentifyMobileNumberFacade"
-            }
+            ]
         }
     },
     "require-dev": {
