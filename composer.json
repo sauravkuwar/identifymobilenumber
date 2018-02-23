@@ -12,7 +12,11 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Saurav\\IdentifyMobileNumber\\": "src/",
+            "Saurav\\IdentifyMobileNumber\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "Saurav\\IdentifyMobileNumber\\Test\\": "tests/"
         }
     },
@@ -20,7 +24,10 @@
         "laravel": {
             "providers": [
                 "Saurav\\IdentifyMobileNumber\\IdentifyMobileNumber"
-            ]
+            ],
+            "aliases": {
+                "IdentifyMobileNumber":"Saurav\\IdentifyMobileNumber\\Facades\\IdentifyMobileNumberFacade"
+            }
         }
     },
     "require-dev": {
