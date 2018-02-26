@@ -2,10 +2,20 @@
 
 namespace Saurav\IdentifyMobileNumber\Library;
 
+use Config;
+
 class IdentifyMobileNumberLibrary
 {
-    protected $ntcKeys = ['984', '985', '986'];
-    protected $ncellKeys = ['980', '981', '982'];
+    // protected $ntcKeys = config('identifymobilenumber.ntc');
+    protected $ntcKeys;
+    // protected $ncellKeys = config('identifymobilenumber.ncell');
+    protected $ncellKeys;
+
+    public function __construct()
+    {
+        $this->ntcKeys = Config::get('identifymobilenumber.ntc');
+        $this->ncellKeys = Config::get('identifymobilenumber.ncell');
+    }
 
     public function check(string $mobileNumber) : string
     {

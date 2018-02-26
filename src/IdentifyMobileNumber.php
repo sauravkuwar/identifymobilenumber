@@ -15,6 +15,17 @@ class IdentifyMobileNumber extends ServiceProvider
     public function boot()
     {
         include __DIR__.'/routes/web.php';
+
+        // Config file path.
+        $configFile = __DIR__ . '/config/identifymobilenumber.php';
+
+        $this->publishes([
+            $configFile => config_path('identifymobilenumber.php'),
+        ]);
+
+        $this->mergeConfigFrom(
+            $configFile, 'identifymobilenumber'
+        );
     }
 
     /**
