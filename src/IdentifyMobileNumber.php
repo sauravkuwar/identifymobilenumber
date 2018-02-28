@@ -14,20 +14,23 @@ class IdentifyMobileNumber extends ServiceProvider
      */
     public function boot()
     {
-        include __DIR__.'/routes/web.php';
-
+        // Route file path
+        $routeFilePath =  __DIR__.'/routes/web.php';
         // Config file path.
         $configFile = __DIR__ . '/config/identifymobilenumber.php';
-        $dbMigrationFile = __DIR__ . '/database/migrations/2018_02_28_070416_create_user_role_table.php';
+        $this->mergeConfigFrom($configFile, 'identifymobilenumber');
+        // Migration file path
+        $dbMigrationFils = __DIR__ . '/database/migrations';
+        $this->loadMigrationsFrom($dbMigrationFiles);
 
         $this->publishes([
             $configFile => config_path('identifymobilenumber.php'),
-            $dbMigrationFile => database_path('migrations/2018_02_28_070416_create_user_role_table.php'),
+            $dbMigrationFiles => database_path('migrations'),
         ]);
 
-        $this->mergeConfigFrom(
-            $configFile, 'identifymobilenumber'
-        );
+
+
+
     }
 
     /**
