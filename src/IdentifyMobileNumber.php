@@ -18,7 +18,7 @@ class IdentifyMobileNumber extends ServiceProvider
 
         // Config file path.
         $configFile = __DIR__ . '/config/identifymobilenumber.php';
-        $dbMigrationFile = __DIR__ . '/database/migrations/2018_02_28_070416_create_user_role_table.php'
+        $dbMigrationFile = __DIR__ . '/database/migrations/2018_02_28_070416_create_user_role_table.php';
 
         $this->publishes([
             $configFile => config_path('identifymobilenumber.php'),
